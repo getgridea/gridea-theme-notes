@@ -1,4 +1,10 @@
-# Gridea 主题开发样板
+# Gridea 主题 Notes
+
+一款简洁的 Gridea 主题，聚焦内容
+
+<div align="center">
+  <img src="theme.jpg">
+</div>
 
 **项目各文件夹内已写 README，开发主题前敬请阅读！**
 
