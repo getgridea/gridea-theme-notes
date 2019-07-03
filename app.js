@@ -2,6 +2,7 @@ const express = require('express')
 const ejs = require('ejs')
 const path = require('path')
 const axios = require('axios')
+const moment = require('moment')
 
 const app = express()
 
@@ -23,7 +24,10 @@ app.get('/', async (req, res) => {
  */
 app.get('/post/:postName', async (req, res) => {
   const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/post.json')
-  res.render('post', { ...response.data })
+  res.render('post', {
+    ...response.data,
+    moment,
+  })
 })
 
 /**
@@ -31,7 +35,10 @@ app.get('/post/:postName', async (req, res) => {
  */
 app.get('/archives', async (req, res) => {
   const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/archives.json')
-  res.render('archives', { ...response.data })
+  res.render('archives', {
+    ...response.data,
+    moment,
+  })
 })
 
 /**

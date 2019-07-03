@@ -20,6 +20,7 @@
     "gulp": "^4.0.0",
     "gulp-less": "^4.0.1",
     "gulp-nodemon": "^2.4.2",
+    "moment": "^2.24.0",
     "nodemon": "^1.18.11"
   },
   "nodemonConfig": {
