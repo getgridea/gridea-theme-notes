@@ -63,7 +63,7 @@
       "name": "openPostToc",
       "label": "是否显示文章目录",
       "group": "布局",
-      "value": "true",
+      "value": true,
       "type": "switch",
       "note": "仅在宽屏时生效"
     },
