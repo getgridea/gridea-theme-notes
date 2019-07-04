@@ -146,6 +146,68 @@
         border-top: 1px solid #fafafa;
         margin: 16px 0;
       }
+
+      .contains-task-list {
+        list-style-type: none;
+        padding-left: 30px;
+      }
+      .task-list-item {
+        position: relative;
+      }
+      .task-list-item-checkbox {
+        position: absolute;
+        cursor: pointer;
+        width: 16px;
+        height: 16px;
+        margin: 4px 0 0;
+        top: 3px;
+        left: -22px;
+        transform-origin: center;
+        transform: rotate(-90deg);
+        transition: all .2s ease;
+        &:checked {
+          transform: rotate(0);
+          &:before {
+            border: transparent;
+            background-color: @oc-green-5;
+          }
+          &:after {
+            transform: rotate(-45deg) scale(1);
+          }
+          + .task-list-item-label {
+            color: #a0a0a0;
+            text-decoration: line-through;
+          }
+        }
+        &:before {
+          content: "";
+          width: 16px;
+          height: 16px;
+          box-sizing: border-box;
+          display: inline-block;
+          border: 1px solid #d0d0d0;
+          border-radius: 2px;
+          background-color: #fff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transition: all .2s ease;
+        }
+        &:after {
+          content: "";
+          transform: rotate(-45deg) scale(0);
+          width: 9px;
+          height: 5px;
+          border: 1px solid #fff;
+          border-top: none;
+          border-right: none;
+          position: absolute;
+          display: inline-block;
+          top: 4px;
+          left: 4px;
+          transition: all .2s ease;
+        }
+      }
     }
   }
 }
