@@ -50,7 +50,7 @@
       "options": [
         {
           "label": "-apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft Yahei', sans-serif",
-          "value": "-apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft Yahei', sans-serif",
+          "value": "-apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft Yahei', sans-serif"
         },
         {
           "label": "Georgia, serif",
@@ -61,21 +61,11 @@
     },
     {
       "name": "openPostToc",
-      "label": "文章目录",
+      "label": "是否显示文章目录",
       "group": "布局",
-      "value": "block",
-      "type": "radio",
-      "options": [
-        {
-          "label": "block",
-          "value": "显示"
-        },
-        {
-          "label": "none",
-          "value": "不显示"
-        }
-      ],
-      "note": "只在宽屏时生效"
+      "value": "true",
+      "type": "switch",
+      "note": "仅在宽屏时生效"
     },
     {
       "name": "contentBgColor",
