@@ -42,6 +42,32 @@
       "note": "包含标题及日期、标签等信息部分"
     },
     {
+      "name": "siteFont",
+      "label": "网站字体",
+      "group": "布局",
+      "value": "-apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft Yahei', sans-serif",
+      "type": "select",
+      "options": [
+        {
+          "label": "-apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft Yahei', sans-serif",
+          "value": "-apple-system, BlinkMacSystemFont, opensans, Optima, 'Microsoft Yahei', sans-serif",
+        },
+        {
+          "label": "Georgia, serif",
+          "value": "Georgia, serif"
+        }
+      ],
+      "note": ""
+    },
+    {
+      "name": "openPostToc",
+      "label": "是否显示文章目录",
+      "group": "布局",
+      "value": "true",
+      "type": "switch",
+      "note": "仅在宽屏时生效"
+    },
+    {
       "name": "contentBgColor",
       "label": "内容区背景色",
       "group": "颜色",

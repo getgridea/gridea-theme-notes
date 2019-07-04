@@ -37,6 +37,24 @@ const generateOverride = (params = {}) => {
     `
   }
 
+  // 网站字体
+  if (params.siteFont) {
+    result += `
+      body {
+        font-family: ${params.siteFont};
+      }
+    `
+  }
+
+  // 是否显示文章目录
+  if (typeof params.openPostToc !== undefined && !params.openPostToc) {
+    result += `
+      .toc-container {
+        display: none;
+      }
+    `
+  }
+
   // 内容区背景色 - contentBgColor
   if (params.contentBgColor && params.contentBgColor !== '#ffffff') {
     result += `
