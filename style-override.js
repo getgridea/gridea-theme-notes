@@ -19,6 +19,24 @@ const generateOverride = (params = {}) => {
     `
   }
 
+  // 标题对齐 - titleAlign: center(默认)、left、right
+  if (params.titleAlign) {
+    result += `
+      .post-container .post .post-title {
+        text-align: ${params.titleAlign};
+      }
+      .post-container .post .post-info {
+        text-align: ${params.titleAlign};
+      }
+      .post-detail .post .post-title {
+        text-align: ${params.titleAlign};
+      }
+      .post-detail .post .post-info {
+        text-align: ${params.titleAlign};
+      }
+    `
+  }
+
   // 内容区背景色 - contentBgColor
   if (params.contentBgColor && params.contentBgColor !== '#ffffff') {
     result += `

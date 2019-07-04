@@ -20,6 +20,28 @@
       "note": "px 或 rem（如 16px 或 1rem）"
     },
     {
+      "name": "titleAlign",
+      "label": "标题对齐",
+      "group": "布局",
+      "value": "center",
+      "type": "radio",
+      "options": [
+        {
+          "label": "居中对齐",
+          "value": "center"
+        },
+        {
+          "label": "左对齐",
+          "value": "left"
+        },
+        {
+          "label": "右对齐",
+          "value": "right"
+        }
+      ],
+      "note": "包含标题及日期、标签等信息部分"
+    },
+    {
       "name": "contentBgColor",
       "label": "内容区背景色",
       "group": "颜色",
