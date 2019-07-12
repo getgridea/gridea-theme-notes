@@ -47,7 +47,7 @@ const generateOverride = (params = {}) => {
   }
 
   // 是否显示文章目录
-  if (typeof params.openPostToc !== undefined && !params.openPostToc) {
+  if (typeof params.openPostToc !== 'undefined' && !params.openPostToc) {
     result += `
       .toc-container {
         display: none;
