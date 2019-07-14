@@ -13,7 +13,8 @@
       font-size: 32px;
       text-align: center;
       padding: 24px 0;
-      font-weight: 600;
+      font-weight: 900;
+      letter-spacing: 0.02em;
     }
 
     .post-info {
@@ -46,13 +47,16 @@
     .post-content {
       width: 100%;
       flex-shrink: 0;
+      font-family: "Droid Serif","PingFang SC","Hiragino Sans GB","Droid Sans Fallback","Microsoft YaHei",sans-serif;
 
       a {
-        color: @main-color;
-        transition: all 0.3s;
+        color: rgba(0,0,0,.98);
+        word-wrap: break-word;
+        text-decoration: none;
+        border-bottom: 1px solid rgba(0,0,0,.26);
         &:hover {
           color: @dark-main-color;
-          border-bottom: 1px dotted @dark-main-color;
+          border-bottom: 1px solid @dark-main-color;
         }
       }
       img {
@@ -64,10 +68,11 @@
       }
 
       p {
-        line-height: 1.725;
-        margin-bottom: 24px;
+        line-height: 1.62;
+        margin-bottom: 1.12em;
         font-size: 16px;
         letter-spacing: .05em;
+        hyphens: auto;
       }
 
       p, li {
@@ -140,9 +145,13 @@
         margin-bottom: 16px;
       }
 
+      ul {
+        list-style-type: square;
+      }
+
       h1, h2, h3, h4, h5, h6 {
         margin: 16px 0;
-        font-weight: bold;
+        font-weight: 700;
         padding-top: 16px;
       }
       h1 {
@@ -269,6 +278,7 @@
   .post-title {
     font-size: 20px;
     font-weight: bold;
+    letter-spacing: .02em;
   }
 }
 
