@@ -22,8 +22,17 @@
       font-size: 12px;
       padding-bottom: 24px;
 
-      .post-time {
+      > span {
         color: @dark-gray;
+
+        &:not(:first-child) {
+          &:before {
+            content: "/ ";
+            font-size: 10px;
+            color: rgba(0,0,0,.1);
+            margin: 0 4px;
+          }
+        }
       }
 
       .post-tag {
@@ -79,20 +88,30 @@
       pre {
         margin-bottom: 24px;
         code {
-          font-size: 16px;
+          font-size: 0.86rem;
           font-family: 'Source Code Pro', Consolas, Menlo, Monaco, 'Courier New', monospace;
           padding: 1em;
           border-radius: 5px;
-          line-height: 1.375;
+          line-height: 1.5;
         }
       }
 
       blockquote {
-        padding: 16px;
-        border-left: 4px solid @oc-gray-6;
-        margin-bottom: 16px;
+        // padding: 16px;
+        // border-left: 4px solid @oc-gray-6;
+        // margin-bottom: 16px;
         color: #9a9a9a;
-        font-style: italic;
+        position: relative;
+        padding: .4em 0 0 2.2em;
+        font-size: .96em;
+        &:before {
+          position: absolute;
+          top: -4px;
+          left: 0;
+          content: "\201c";
+          font: 700 62px/1 serif;
+          color: rgba(0,0,0,.1);
+        }
         p {
           margin-bottom: 0;
         }
@@ -124,26 +143,51 @@
         padding-top: 16px;
       }
       h1 {
-        font-size: 28px;
+        font-size: 1.8em;
       }
       h2 {
-        font-size: 24px;
+        font-size: 1.42em;
       }
       h3 {
-        font-size: 20px;
+        font-size: 1.17em;
       }
       h4 {
-        font-size: 18px;
+        font-size: 1em;
       }
       h5 {
-        font-size: 16px;
+        font-size: 1em;
       }
       h6 {
-        font-size: 14px;
+        font-size: 1em;
+        font-weight: 500;
       }
       hr {
-        border-top: 1px solid #fafafa;
-        margin: 16px 0;
+        display: block;
+        border: 0;
+        margin: 2.24em auto 2.86em;
+        &:before {
+          color: rgba(0,0,0,.2);
+          font-size: 1.1em;
+          display: block;
+          content: "* * *";
+          text-align: center;
+        }
+      }
+
+      .footnotes {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 760px;
+        padding-left: 18px;
+        padding-right: 18px;
+        &:before {
+          content: "";
+          display: block;
+          border-top: 4px solid rgba(0,0,0,.1);
+          width: 50%;
+          max-width: 100px;
+          margin: 40px 0 20px;
+        }
       }
     }
   }

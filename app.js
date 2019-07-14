@@ -24,6 +24,7 @@ app.get('/', async (req, res) => {
  */
 app.get('/post/:postName', async (req, res) => {
   const response = await axios.get('https://raw.githubusercontent.com/getgridea/mock-json/master/post.json')
+  console.log(response)
   res.render('post', {
     ...response.data,
     moment,
@@ -57,6 +58,6 @@ app.get('/tag/:tagName', async (req, res) => {
   res.render('tag', { ...response.data })
 })
 
-//使用8080端口
+// 使用 3001 端口
 app.listen(3001)
 console.log("The server is running on 3001")
