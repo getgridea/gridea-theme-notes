@@ -8,8 +8,8 @@
         <a href="<%= post.link %>" class="post">
           <h2 class="post-title">
             <%= post.title %>
-            <div class="time"><%= moment(post.date).format('MM-DD') %></div>
           </h2>
+          <div class="time"><%= post.dateFormat %></div>
         </a>
       <% } %>
     <% }); %>
