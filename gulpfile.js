@@ -17,7 +17,7 @@ gulp.task('copy_media', () => {
 gulp.task('gulp_nodemon', () => {
   nodemon({
   script: 'app.js'                       // this is where my express server is
-  , ext: 'js html css ejs less'          // nodemon watches *.js, *.html, *.css, *.ejs, *.less files
+  , ext: 'js'          // nodemon watches *.js, *.html, *.css, *.ejs, *.less files
   , env: { 'NODE_ENV': 'development' }
   })
 })
